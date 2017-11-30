@@ -22,7 +22,6 @@ class MemoryGame extends React.Component{
     }
   }
   _imagesPreload(){
-    console.log("сработало");
     return(
       <div className="image-preload">
         {
