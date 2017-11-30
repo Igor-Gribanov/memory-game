@@ -2,24 +2,39 @@ import React from 'react';
 import GameControls from './GameControls.js';
 import GameInfo from './GameInfo.js';
 import TilesGrid from './TilesGrid.js';
+import {CARD_IMAGES} from './TilesGrid.js';
 
 require('./MemoryGame.css');
 
 class MemoryGame extends React.Component{
   constructor(props){
     super(props);
-
+    
     this.state = {
       rounds: 0,
       mode: props.mode,
       pairs: (props.mode**2)/2,
+      imagePreload: true,
       isStarted: true,
       isFinished: false,
       restart: false,
       results: []
     }
   }
-
+  _imagesPreload(){
+    console.log("сработало");
+    return(
+      <div className="image-preload">
+        {
+          CARD_IMAGES.map((element, index)=>{
+            return(
+              <img key={index} src={element.imageUrl}/>
+            );
+          })
+        }
+      </div>
+    );
+  }
   _removeMatch(){
     this.setState({
       pairs: this.state.pairs - 1
@@ -55,7 +70,13 @@ class MemoryGame extends React.Component{
       })
     }
   }
-
+  componentDidMount(){
+    if(this.state.imagePreload){
+      this.setState({
+        imagePreload: false,
+      })
+    }
+  }
   _startGame(){
     this.setState({
       isStarted: true,
@@ -112,6 +133,11 @@ class MemoryGame extends React.Component{
     let isResultsOpen = true;
     return (
       <div className="memory-game">
+        {
+          this.state.imagePreload ?
+            this._imagesPreload()
+          : null
+        }
         <GameControls 
           results={this.state.results} 
           onStart={this._startGame.bind(this)} 

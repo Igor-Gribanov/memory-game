@@ -14,11 +14,9 @@
   justify-content: center;
   flex-flow: row wrap;
   flex-basis: 300px;
-/*  background-color: #000;
-  background-image: url('/../img/victory.jpg');
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: cover;*/
+}
+.image-preload{
+  display: none;
 }
 .congatz-message{
   align-self: center;

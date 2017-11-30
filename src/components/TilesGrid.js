@@ -42,7 +42,7 @@ const CARD_IMAGES = [
     imageUrl: './img/girls/18.png'
   }
 ];
-
+export {CARD_IMAGES};
 function compareRandom(a, b) {
   return Math.random() - 0.5
 };
