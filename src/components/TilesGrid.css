@@ -1,0 +1,13 @@
+.tiles-grid{
+  display: flex;
+  max-width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 3px 0;
+}
+.row{
+  flex-basis: 600px;
+  max-width: 600px;
+  display: flex;
+  justify-content: space-evenly;
+}

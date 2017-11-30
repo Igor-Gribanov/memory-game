@@ -1,0 +1,110 @@
+.game-controls{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: #fff;
+  padding: 5px;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  line-height: 20px;
+}
+.controls{
+  display: inline-block;
+  padding: 5px;
+  margin-left: 5px;
+  cursor: pointer;
+  background-color: #212121;
+  border-radius: 15px;
+}
+.restart-icon{
+  margin-left: 5px;
+}
+.controls-mode{
+  display: inline-block;
+  margin-left: 5px;
+  color: #212121;
+}
+
+.controls-mode__buttons{
+  margin-left: 5px;
+  padding: 5px;
+  display: inline-block;
+  background-color: #212121;
+  color: #fff;
+  border-radius: 15px;
+}
+
+.current-mode{
+  cursor: pointer;
+}
+.current-mode_text{
+  text-transform: uppercase;
+}
+.current-mode_caret{
+  margin-left: 5px;
+}
+.buttons__dropdown{
+  display: none;
+  position: absolute;
+  background-color: #212121;
+}
+
+.controls-mode__buttons:hover .buttons__dropdown{
+  display: block;
+}
+
+.mode-buttons__button{
+  display: block;
+}
+
+.option-button{
+  border: none;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: block;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  background-color: #212121;
+  color: #fff;
+}
+
+.game-results{
+  position: absolute;
+  margin-top: 10px;
+  padding: 10px;
+  max-height: 100px;
+  overflow-y: auto;
+  background-color: #D3E3F1;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #212121;
+  -webkit-box-shadow: 0px 0px 50px 5px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 0px 50px 5px rgba(0,0,0,0.3);
+  box-shadow: 0px 0px 50px 5px rgba(0,0,0,0.3);
+}
+.result-wrapper{
+  border-bottom: 1px solid #8FA4B5;
+  margin: 5px;
+}
+.result-wrapper::after{
+  content: '';
+}
+.result{
+  cursor: text;
+}
+
+.game-results::-webkit-scrollbar{
+  width: 6px;
+  background-color: #80BFDB;
+}
+.game-results::-webkit-scrollbar-thumb {
+    background-color: #237385;
+}
+.game-results::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #80BFDB;
+}

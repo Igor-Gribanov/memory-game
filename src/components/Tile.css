@@ -1,0 +1,43 @@
+.tile-wrapper{
+  display: inline-block;
+  margin: 3px 0;
+}
+.tile-wrapper_4{
+  width: 20%;
+}
+.tile-wrapper_6{
+  width: 14%;
+}
+.tile{
+  background-color: #fff;
+  box-sizing: border-box;
+  border: solid 2px #d3d3d2;
+  border-radius: 3px;
+  width: 100%;
+  height: 100%;
+}
+.tile_open{
+  display: flex;
+  -webkit-box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.2);
+}
+.image_open{
+  align-self: center;
+  width: 100%;
+  border-radius: 50%;
+}
+.tile_closed:hover{
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.2);
+}
+.tile_solved{
+  box-sizing: border-box;
+  border: solid 2px #fff;
+  border-radius: 3px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
